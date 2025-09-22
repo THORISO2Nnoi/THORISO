@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenah Nnoi Thoriso Maubane | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Roboto', sans-serif; background:#f4f4f9; color:#333; }
+
+    /* Navigation */
+    nav {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 10px rgba(2,6,23,0.06);
+    }
+    .nav-links {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      padding:12px 0;
+      margin:0;
+    }
+    .nav-links li { margin: 0 10px; }
+    .nav-links li a {
+      color:white;
+      text-decoration:none;
+      font-weight:700;
+      font-size:1.1rem;
+      padding:8px 15px;
+      border-radius:6px;
+      transition: all 0.3s ease;
+    }
+    .nav-links li a:hover {
+      background:white;
+      color:#0077b6;
+    }
+
+    /* Hero */
+    header {
+      text-align:center;
+      padding:120px 20px 80px;
+      background: url('images/Profile1.jpeg') no-repeat center center/cover;
+      color:white;
+      position:relative;
+    }
+    header::before {
+      content:"";
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.55);
+      z-index:0;
+    }
+    header h1, header h2, header p, header a {
+      position: relative;
+      z-index:1;
+    }
+    header h1 { font-size:3rem; margin-bottom:10px; font-weight:700; }
+    header h2 { font-size:1.6rem; margin-bottom:25px; font-weight:400; color:#ffdd57; }
+    header p { font-size:1.1rem; max-width:750px; margin:0 auto 15px auto; line-height:1.7; }
+    button.cv-btn {
+      padding:12px 25px;
+      font-size:1rem;
+      background:#f0a500;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      transition: all 0.3s ease;
+    }
+    button.cv-btn:hover {
+      background:#ffb84d;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      header h1 { font-size:2.2rem; }
+      header h2 { font-size:1.3rem; }
+      header p { font-size:1rem; }
+      .nav-links { flex-wrap:wrap; }
+      .nav-links li { margin:5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skills.html">Skills & Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Lenah Nnoi Thoriso Maubane</h1>
+    <h2>Dedicated IT Student | Software Developer</h2>
+    <p>Hello! I am a passionate IT student with hands-on experience in creating applications and managing teams to deliver successful projects. I thrive on problem-solving, creativity, and building solutions that have real impact.</p>
+    <p>I am proficient in software development, cloud computing, and collaboration tools such as Word, Excel, and PowerPoint. I aim to combine technical expertise with creativity, ensuring that I don’t just build applications but design practical systems that improve efficiency and solve real problems.</p>
+    <p>The value I bring to employers is simple: I can transform ideas into working solutions, make workflows smoother, and contribute to building systems that support both business goals and community development. I am eager to grow as a software developer and continue learning from experienced professionals.</p>
+    <a href="Lenah_Thoriso_Maubane_CV.pdf" download><button class="cv-btn">Download My CV</button></a>
+  </header>
+
+</body>
+</html>
