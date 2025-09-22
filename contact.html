@@ -117,8 +117,21 @@
 <section>
   <h2 style="text-align:center; font-size:2rem; color:#0077b6; margin-bottom:40px;">Contact Me</h2>
 
-  <div class="contact-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px;">
+  <!-- Contact Form -->
+  <form action="https://formspree.io/f/mwprewjl" method="POST" style="max-width:600px; margin:0 auto 40px; padding:20px; background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    <label for="name" style="font-weight:bold;">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Your full name" required style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;"><br>
 
+    <label for="email" style="font-weight:bold;">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Your email address" required style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;"><br>
+
+    <label for="message" style="font-weight:bold;">Message:</label><br>
+    <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required style="width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc;"></textarea><br>
+
+    <button type="submit" style="padding:10px 20px; background-color:#0077b6; color:white; border:none; border-radius:5px; cursor:pointer;">Send Message</button>
+  </form>
+
+  <div class="contact-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px;">
     <div class="contact-item" style="display:flex; align-items:center; gap:15px; font-size:1.4rem; padding:15px 20px; background:#fff; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:all 0.3s;">
       <img src="images/Email.png" alt="Email" style="width:50px; height:50px;">
       <a href="mailto:lenahthoriso@gmail.com" style="color:#1e1e2f; font-weight:bold; text-decoration:none;">lenahthoriso@gmail.com</a>
@@ -141,6 +154,7 @@
 
   </div>
 </section>
+
 
 </body>
 </html>
