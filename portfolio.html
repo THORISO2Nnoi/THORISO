@@ -42,44 +42,69 @@
   header p { font-size:1.2rem; max-width:750px; margin:0 auto 25px auto; line-height:1.7; }
   header img { width:180px; height:auto; border-radius:50%; margin-top:15px; }
 
- /* Project spacing */
-.project {
-  background:#fff;
-  padding:20px;
-  border-radius:10px;
-  flex:1 1 calc(50% - 20px);
-  display:flex;
-  align-items:center;
-  transition:all 0.3s ease;
-  margin-bottom:30px; /* ✅ adds space between projects */
-}
+  /* Projects Section */
+  section { max-width:1200px; margin:40px auto; padding:20px; }
+  h2 { color:#0077b6; margin-bottom:20px; border-bottom:2px solid #0077b6; display:inline-block; padding-bottom:5px; }
 
-/* Badge styling */
-.badge {
-  display:inline-block;
-  background: #ffcc00;      /* bright yellow */
-  color: #000;              /* black text */
-  font-size: 14px;          /* slightly bigger */
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-left: 10px;
-  margin-top: 6px;
-  vertical-align: middle;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* little depth */
-}
+  .projects-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* space between left and right columns */
+  }
 
-  .project:hover { transform:translateY(-5px); box-shadow:0 12px 20px rgba(0,0,0,0.15); }
-  .project img { width:100px; height:100px; object-fit:cover; border-radius:10px; margin-right:15px; }
-  .project div { max-width:calc(100% - 115px); }
+  .projects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* vertical spacing between projects */
+    flex: 1;
+  }
+
+  /* Project card styling */
+  .project {
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    transition:all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .project img {
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-right: 15px;
+  }
+
+  .project div { max-width: calc(100% - 115px); }
+  .project:hover { transform: translateY(-5px); box-shadow:0 12px 20px rgba(0,0,0,0.15); }
+
+  /* Badge styling */
+  .badge {
+    display:inline-block;
+    background:#ffcc00;
+    color:#000;
+    font-size:14px;
+    font-weight:bold;
+    padding:4px 10px;
+    border-radius:20px;
+    margin-left:10px;
+    margin-top:6px;
+    vertical-align: middle;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  }
+
   .project a { text-decoration:none; color:#0077b6; font-weight:700; transition:all 0.3s ease; }
   .project a:hover { color:#f0a500; }
 
-  @media(max-width:768px) {
-    .projects { flex-direction:column; align-items:center; }
-    .project { flex:1 1 100%; flex-direction:column; text-align:center; }
-    .project img { margin-bottom:15px; }
-    .project div { max-width:100%; }
+  @media(max-width: 768px) {
+    .projects-container { flex-direction: column; }
+    .projects-column { gap: 20px; }
+    .project { flex-direction: column; text-align:center; }
+    .project img { margin-bottom: 15px; }
+    .project div { max-width: 100%; }
   }
 </style>
 </head>
@@ -107,58 +132,56 @@
 <!-- Projects Section -->
 <section>
   <h2>Projects</h2>
-<div class="project">
-  <img src="images/MediConnect.png" alt="MediConnect">
-  <div>
-    <strong>MediConnect (Patient App)</strong>
-    <span class="badge">🚧 Under Development</span>
-    <p>
-      Built with Kotlin + MongoDB backend on Render. 
-      Features (in progress): Secure login, appointments, history tracking.
-    </p>
-    <a href="https://github.com/THORISO2Nnoi/MEDI_CONNECT.git" target="_blank">View on GitHub</a>
-  </div>
-</div>
-
-<div class="project">
-  <img src="images/MediStaff.png" alt="MediStaff">
-  <div>
-    <strong>MediStaff (Staff App)</strong>
-    <span class="badge">🚧 Under Development</span>
-    <p>
-      Android application for hospital staff management. 
-      Built with Kotlin + Firebase backend.
-    </p>
-    <a href="https://github.com/THORISO2Nnoi/MEDI_STAFF.git" target="_blank">View on GitHub</a>
-  </div>
-</div>
-
-
-    <div class="project">
-      <div>
-        <strong>Portfolio Website</strong>
-        <p>Responsive personal portfolio built with HTML, CSS, and JavaScript. Showcases skills, projects, and contact info.</p>
+  <div class="projects-container">
+    
+    <!-- Left Column -->
+    <div class="projects-column">
+      <div class="project">
+        <img src="images/MediConnect.png" alt="MediConnect">
+        <div>
+          <strong>MediConnect (Patient App)</strong>
+          <span class="badge">🚧 Under Development</span>
+          <p>Built with Kotlin + MongoDB backend on Render. Features (in progress): Secure login, appointments, history tracking.</p>
+          <a href="https://github.com/THORISO2Nnoi/MEDI_CONNECT.git" target="_blank">View on GitHub</a>
         </div>
-    </div>
+      </div>
 
-    <div class="project">
-      <div>
-        <strong>UI/UX Design Mockups</strong>
-        <p>Created interactive mockups and prototypes using Figma to showcase web and app designs.</p>
-        
+      <div class="project">
+        <div>
+          <strong>Portfolio Website</strong>
+          <p>Responsive personal portfolio built with HTML, CSS, and JavaScript. Showcases skills, projects, and contact info.</p>
+        </div>
       </div>
     </div>
 
-<div class="project">
-  <img src="images/channels4_profile.jpg" alt="Phase 2 Project" style="width:100px; height:100px; object-fit:cover; border-radius:8px; margin-right:15px;">
-  <div>
-    <strong>Phase 2 Project</strong>
-    <p>Download to check the links</p>
-    <a href="Phase_2_project.pdf" target="_blank" style="color:#0077b6; font-weight:bold; text-decoration:none;">
-      View / Download Project
-    </a>
-  </div>
-</div>
+    <!-- Right Column -->
+    <div class="projects-column">
+      <div class="project">
+        <img src="images/MediStaff.png" alt="MediStaff">
+        <div>
+          <strong>MediStaff (Staff App)</strong>
+          <span class="badge">🚧 Under Development</span>
+          <p>Android application for hospital staff management. Built with Kotlin + Firebase backend.</p>
+          <a href="https://github.com/THORISO2Nnoi/MEDI_STAFF.git" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div>
+          <strong>UI/UX Design Mockups</strong>
+          <p>Created interactive mockups and prototypes using Figma to showcase web and app designs.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="images/channels4_profile.jpg" alt="Phase 2 Project">
+        <div>
+          <strong>Phase 2 Project</strong>
+          <p>Download to check the links</p>
+          <a href="Phase_2_project.pdf" target="_blank">View / Download Project</a>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
