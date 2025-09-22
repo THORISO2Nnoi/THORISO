@@ -6,60 +6,42 @@
 <title>Thoriso Maubane | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  /* Reset & base */
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:'Roboto', sans-serif; background:#f4f4f9; color:#333; }
+  body { font-family:'Roboto', sans-serif; background:#f4f4f9; color:#333; margin:0; }
 
-  /* Navigation */
   nav {
     background: linear-gradient(90deg, #0077b6, #00b4d8);
-    position: sticky;
-    top:0;
-    z-index:100;
+    position: sticky; top:0; z-index:100;
     box-shadow:0 3px 10px rgba(2,6,23,0.06);
   }
   .nav-links { list-style:none; display:flex; justify-content:center; padding:12px 0; margin:0; }
   .nav-links li { margin:0 10px; }
   .nav-links li a {
-    color:white;
-    text-decoration:none;
-    font-weight:700;
-    font-size:1.1rem;
-    padding:8px 15px;
-    border-radius:6px;
-    transition:all 0.3s ease;
+    color:white; text-decoration:none; font-weight:700; font-size:1.1rem;
+    padding:8px 15px; border-radius:6px; transition:all 0.3s ease;
   }
   .nav-links li a:hover { background:white; color:#0077b6; }
 
-  /* Header */
-  header {
-    text-align:center;
-    padding:100px 20px 60px;
-    color:#0077b6;
-  }
+  header { text-align:center; padding:100px 20px 60px; color:#0077b6; }
   header h1 { font-size:3rem; margin-bottom:10px; font-weight:700; }
   header h2 { font-size:1.6rem; margin-bottom:20px; font-weight:500; color:#f0a500; }
   header p { font-size:1.2rem; max-width:750px; margin:0 auto 25px auto; line-height:1.7; }
   header img { width:180px; height:auto; border-radius:50%; margin-top:15px; }
 
-  /* Projects Section */
   section { max-width:1200px; margin:40px auto; padding:20px; }
   h2 { color:#0077b6; margin-bottom:20px; border-bottom:2px solid #0077b6; display:inline-block; padding-bottom:5px; }
 
   .projects-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* space between left and right columns */
+    gap: 30px; /* space between columns */
   }
 
   .projects-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* vertical spacing between projects */
-    flex: 1;
+    gap: 30px; /* vertical space between projects */
   }
 
-  /* Project card styling */
   .project {
     background:#fff;
     padding:20px;
@@ -69,30 +51,14 @@
     transition:all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
-
-  .project img {
-    width:100px;
-    height:100px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-right: 15px;
-  }
-
+  .project img { width:100px; height:100px; object-fit:cover; border-radius:10px; margin-right:15px; }
   .project div { max-width: calc(100% - 115px); }
   .project:hover { transform: translateY(-5px); box-shadow:0 12px 20px rgba(0,0,0,0.15); }
 
-  /* Badge styling */
   .badge {
-    display:inline-block;
-    background:#ffcc00;
-    color:#000;
-    font-size:14px;
-    font-weight:bold;
-    padding:4px 10px;
-    border-radius:20px;
-    margin-left:10px;
-    margin-top:6px;
-    vertical-align: middle;
+    display:inline-block; background:#ffcc00; color:#000;
+    font-size:14px; font-weight:bold; padding:4px 10px; border-radius:20px;
+    margin-left:10px; margin-top:6px; vertical-align: middle;
     box-shadow:0 2px 6px rgba(0,0,0,0.15);
   }
 
@@ -103,14 +69,13 @@
     .projects-container { flex-direction: column; }
     .projects-column { gap: 20px; }
     .project { flex-direction: column; text-align:center; }
-    .project img { margin-bottom: 15px; }
-    .project div { max-width: 100%; }
+    .project img { margin-bottom:15px; }
+    .project div { max-width:100%; }
   }
 </style>
 </head>
 <body>
 
-<!-- Navigation -->
 <nav>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -121,7 +86,6 @@
   </ul>
 </nav>
 
-<!-- Header -->
 <header>
   <h1>Lenah Nnoi Thoriso Maubane</h1>
   <h2>Dedicated IT Student | Software Developer</h2>
@@ -129,12 +93,10 @@
   <p>Portfolio showcasing my development projects, apps, and web applications. Click on any project to view details or source code.</p>
 </header>
 
-<!-- Projects Section -->
 <section>
   <h2>Projects</h2>
   <div class="projects-container">
-    
-    <!-- Left Column -->
+    <!-- LEFT COLUMN -->
     <div class="projects-column">
       <div class="project">
         <img src="images/MediConnect.png" alt="MediConnect">
@@ -154,7 +116,7 @@
       </div>
     </div>
 
-    <!-- Right Column -->
+    <!-- RIGHT COLUMN -->
     <div class="projects-column">
       <div class="project">
         <img src="images/MediStaff.png" alt="MediStaff">
@@ -182,7 +144,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
